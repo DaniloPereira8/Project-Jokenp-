@@ -134,3 +134,55 @@ footer {
     padding: 10px;
     color: white;
 }
+
+@media screen and (max-width:520px){
+    .caixa{
+        width: 85%;
+    }
+
+    .choice{
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width:410px){
+    .choice{
+        font-size: 40px;
+    }
+
+    .gif img{
+        width: 100px;
+    }
+
+    section p{
+        font-size: 25px;
+    }
+
+    span{
+        font-size: 25px;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:360px){
+    .choice{
+        font-size: 34px;
+    }
+
+    
+    .gif img{
+        width: 80px;
+    }
+
+    section p{
+        font-size: 20px;
+    }
+
+    span{
+        font-size: 20px;
+    }
+
+}
