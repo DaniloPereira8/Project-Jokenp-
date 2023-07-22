@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+    font-family: 'VT323', monospace;
+}
+
+body {
+    background-color: black;
+}
+
+video {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0 5px 0px;
+    color: white;
+    font-size: 30px;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.caixa {
+    background-color: rgba(255, 255, 255, 0.098);
+    padding: 40px;
+}
+
+.caixa:hover {
+    box-shadow: 4px 4px 10px rgb(168, 169, 235);
+    transition: all .5s ease-in-out;
+
+
+}
+
+section {
+    text-align: center;
+    color: white;
+}
+
+section p {
+    margin: 10px;
+    font-size: 30px;
+}
+
+.choice {
+    font-size: 80px;
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    margin: 10px;
+    transition: all .2s ease-in-out;
+}
+
+.choice:hover {
+    background-color: rgba(0, 0, 0, 0.368);
+    border-radius: 6px;
+}
+
+.choice:active {
+    background-color: rgba(44, 44, 124, 0.228);
+}
+
+.choice{
+    position: relative;
+}
+
+.choice::before{
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    color: #fcd307;
+    font-size: 20px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.choice[data-pedra]:hover::before{
+    content: attr(data-pedra);
+    opacity: 1;
+}
+.choice[data-papel]:hover::before{
+    content: attr(data-papel);
+    opacity: 1;
+}
+.choice[data-tesoura]:hover::before{
+    content: attr(data-tesoura);
+    opacity: 1;
+}
+
+.choice:hover::before {
+    opacity: 1;
+  }
+
+span {
+    color: #fcd307;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.gif {
+    display: flex;
+    justify-content: center;
+}
+
+.gif img {
+    width: 130px;
+    margin: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    color: white;
+}

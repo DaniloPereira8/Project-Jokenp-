@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=VT323&display=swap" rel="stylesheet">
+    <title>Dan JokenPô</title>
+</head>
+
+<body>
+
+    <video autoplay muted loop>
+        <source src="./video/space.mp4" type="video/mp4">
+        <!-- Inclua outras fontes do vídeo aqui, caso necessário (por exemplo, webm, ogg, etc.) -->
+        Seu navegador não suporta a reprodução de vídeos em HTML5.
+    </video>
+
+    <header>
+        <h1>JokenPô</h1>
+    </header>
+
+    <main>
+        <div class="caixa">
+            <section>
+                <button onclick="(humanPlayer('rock')) " class="choice" data-pedra="Pedra">&#x270A;</button>
+                <button onclick="(humanPlayer('paper')) " class="choice" data-papel="Papel">&#x1F590;</button>
+                <button onclick="(humanPlayer('scissors')) " class="choice" data-tesoura="Tesoura">&#x270C;</button>
+            </section>
+
+            <div class="gif">
+                <img src="" class="result-gif" alt="">
+            </div>
+
+            <section>
+                <p class="result"></p>
+                <p>Escolha da Máquina: <span id="machine-choice"></span></p>
+                <p>Sua pontuação: <span id="human-score">0</span></p>
+                <p>Pontuação do Robô: <span id="machine-score">0</span></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Danilo Pereira | All rights reserved</p>
+    </footer>
+
+</body>
+<script src="./scripts.js"></script>
+
+</html>
